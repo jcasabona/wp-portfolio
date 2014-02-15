@@ -1,0 +1,268 @@
+@import url("http://fonts.googleapis.com/css?family=Fenix|Open+Sans+Condensed:300,700");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.right, header h2, .copy {
+  float: right; }
+
+.left, .half, .third, .two-third, header h1 {
+  float: left; }
+
+@media screen and (min-width: 32.19em) {
+  .half {
+    width: 47%; } }
+
+@media screen and (min-width: 32.19em) {
+  .third {
+    width: 30%; } }
+
+@media screen and (min-width: 32.19em) {
+  .two-third {
+    width: 62%; } }
+
+.card {
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  font-size: 1.4em;
+  background: #FFFFFF;
+  border: 1px solid #696a6b;
+  margin: 1em 0.5em;
+  padding: 0.75em;
+  color: #a8a9aa; }
+  @media screen and (min-width: 45.88em) {
+    .card {
+      float: left;
+      width: 40%; } }
+  @media screen and (min-width: 54.62em) {
+    .card {
+      width: 44%; } }
+  @media screen and (min-width: 72em) {
+    .card {
+      width: 29%; } }
+
+.small, .copy {
+  font-size: 0.9em; }
+
+.date {
+  font-size: 0.75em;
+  color: #999999;
+  font-style: italic;
+  padding-left: 1em;
+  display: inline-block;
+  text-align: right; }
+
+/** The Crux of the Matter **/
+body {
+  background: #d0d0d0;
+  font-family: "Open Sans Condensed", Futura, Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+  text-align: center;
+  color: #a8a9aa; }
+
+a {
+  color: #425463;
+  text-decoration: none; }
+  a:hover {
+    color: #8ca1b2; }
+
+b, strong {
+  font-weight: bold; }
+
+form {
+  max-width: 80%;
+  margin: 1em auto;
+  text-align: left;
+  font-size: 1.25em;
+  padding: 1em; }
+  form div label {
+    display: inline-block;
+    padding: 0.5em; }
+  form input {
+    padding: 0.5em;
+    font-size: 1.4em;
+    color: #696a6b; }
+
+h1 {
+  font-size: 3em; }
+
+h2 {
+  font-size: 2.5em; }
+
+h3 {
+  font-size: 2em; }
+
+h4 {
+  font-size: 1.5em; }
+
+h5 {
+  font-size: 1em; }
+
+h6 {
+  font-size: 0.5em; }
+
+img, object, wmbed, video {
+  max-width: 100%;
+  height: auto; }
+
+p, li {
+  font-size: 1.25em;
+  padding: 0.5em; }
+
+.center {
+  text-align: center; }
+
+#wrapper {
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.4em; }
+
+header {
+  -webkit-box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.3);
+  background: #a8a9aa;
+  color: #696a6b;
+  padding: 1em; }
+  header h1 {
+    margin: 0;
+    font-size: 4em; }
+
+header h1 a {
+  color: #696a6b; }
+
+#content {
+  padding: 1em 0.5em; }
+
+footer {
+  background: #000000;
+  color: #d0d0d0;
+  padding: 0.5em;
+  font-size: 1.5em; }
+
+a.button {
+  -webkit-box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background: -moz-linear-gradient(top, #a62424 0%, #f07f7f);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f07f7f), to(#a62424));
+  display: block;
+  color: #FFFFFF;
+  padding: 0.5em 1em;
+  width: 80%;
+  margin: 15px auto;
+  font-size: 2em;
+  text-align: center; }
+  a.button:hover {
+    background: -moz-linear-gradient(top, #f07f7f 0%, #a62424);
+    background: -webkit-gradient(linear, left top, left bottom, from(#a62424), to(#f07f7f)); }
+
+/**SOME DEFAULT BLOG STYLES**/
+.navigation {
+  padding: 0.5em;
+  font-size: 1.25em; }
+
+.post {
+  margin: 0.5em; }
+
+.postmetadata {
+  border-style: solid;
+  border-color: #425463;
+  border-width: 1px 0;
+  padding: 0.5em;
+  font-size: 1.25em -0.35; }
+
+ol.commentlist {
+  margin: 0.5em; }
+
+img.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.alignright {
+  float: right; }
+
+.alignleft {
+  float: left; }
+
+/* End Images */
+/* Captions */
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-caption {
+  border: 1px solid #696a6b;
+  text-align: center;
+  background-color: #f3f3f3;
+  padding: 0.5em -0.2; }
+
+.wp-caption img {
+  margin: 0;
+  padding: 0;
+  border: 0 none; }
+
+.wp-caption p.wp-caption-text {
+  font-size: 1.25em -0.4;
+  line-height: 1.7em;
+  padding: 0.5em -0.3;
+  margin: 0; }
+
+/* End captions */
+/* self-clear floats */
+.group:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clear {
+  clear: both; }

@@ -1,0 +1,28 @@
+@mixin box-shadow{
+	-webkit-box-shadow:  0px 4px 3px 0px rgba(0, 0, 0, 0.3);
+    box-shadow:  0px 4px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+@mixin gradient($from: #f07f7f, $to: #a62424){
+	background: -moz-linear-gradient(
+		top,
+		$to 0%,
+		$from);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from($from),
+		to($to));
+}
+
+@mixin border-radius($px: 6px){
+	border-radius: $px;
+	-moz-border-radius: $px;
+	-webkit-border-radius: $px;
+}
+
+
+@mixin course($color){
+	color: $color;
+    font-weight: bold;
+    
+}

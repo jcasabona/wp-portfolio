@@ -1,0 +1,335 @@
+@import 'normalize';
+@import '_mixins';
+
+@import url("http://fonts.googleapis.com/css?family=Fenix|Open+Sans+Condensed:300,700");
+
+
+//variables
+$font-size-reset: 62.5%;
+$font-serif: "Fenix", Georgia, "Times New Roman", serif;
+$font-serif-alt: Cambria, Georgia, Times, "Times New Roman", serif;
+$font-sans: "Open Sans Condensed", Futura, Arial, Helvetica, sans-serif;
+$font-size-reg: 1.25em;
+$h1-size: 3em;
+
+$color-dark: #A8A9AA;
+$color-light: lighten($color-dark, 40%);
+$color-accent: #425463;
+$color-alt-dark: #696A6B;
+$color-alt-light: lighten($color-alt-dark, 40%);;
+
+$bp-small: 32.19em;
+$bp-medium: 45.88em;
+$bp-large: 54.62em;
+$bp-xl: 72em;
+$padding: 0.5em;
+$margin: 0;
+
+
+
+//Stuff that can be extended
+
+%floaty-stuff{
+	margin: ($padding)-0.2;
+	padding: $padding;
+	}
+
+ %title-style{
+ 	font-family: $font-serif;
+  	color: $color-accent;
+  	padding: $padding;
+  	margin: 0;
+ 	} 
+
+.right{
+	@extend floaty-stuff;
+	float: right;
+	}
+
+.left{
+	@extend floaty-stuff;
+	float: left;
+	}
+
+.contain{
+
+	}
+
+.half{
+	@extend .left;
+	@media screen and (min-width: $bp-small){
+		width: 47%;
+	}
+	}
+
+.third{ 
+	@extend .left;
+	@media screen and (min-width: $bp-small){
+		width: 30%;
+	}
+	}
+
+.two-third{ 
+	@extend .left;
+	@media screen and (min-width: $bp-small){
+		width: 62%;
+	}
+	}
+
+.card{
+	@include border-radius;
+	font-size: $font-size-reg+0.15;
+	background: #FFFFFF;
+	border: 1px solid $color-alt-dark;
+	margin: $padding*2 $padding;
+	padding: $padding*1.5;
+	color: $color-dark;
+
+	@media screen and (min-width: $bp-medium){
+		float: left;
+		width: 40%;
+		}
+
+	@media screen and (min-width: $bp-large){
+		width: 44%;
+		}
+
+	@media screen and (min-width: $bp-xl){
+		width: 29%;
+		}
+
+	}
+
+.small{
+	font-size: $font-size-reg - 0.35;
+	}
+
+.date{
+	font-size: $font-size-reg - 0.5;
+	color: #999999;
+	font-style: italic;
+	padding-left: $padding*2;
+	display: inline-block;
+	text-align: right;
+	}
+
+/** The Crux of the Matter **/
+
+body{
+	background: $color-alt-light;
+	font-family: $font-sans;
+	font-size: $font-size-reset;
+	text-align: center;
+	color: $color-dark;
+	}
+	
+a{
+	color: $color-accent;
+	text-decoration: none;
+	
+	&:hover{
+		color: lighten($color-accent, 30%);
+		}
+
+	}
+	
+
+b, strong{
+	font-weight: bold;
+	}
+
+form{
+	max-width: 80%;
+	margin: $padding*2 auto;
+	text-align: left;
+	font-size: $font-size-reg;
+	padding: $padding*2;
+
+	& div label{
+		display: inline-block;
+		padding: $padding;
+	}
+
+	& input{
+		padding: $padding;
+		font-size: $font-size-reg+0.15;
+		color: $color-alt-dark;
+		}
+
+	}
+	
+	
+h1,h2,h3{
+	@extend title-style;
+	}
+
+ @each $h in h1, h2, h3, h4, h5, h6{
+    #{$h} { 
+      font-size: $h1-size;
+      }
+
+      $h1-size: $h1-size - 0.5;
+  }
+	
+	
+img,object,wmbed,video{
+	max-width: 100%;
+	height: auto;
+	}
+
+p, li{
+	font-size: $font-size-reg;
+	padding: $padding;
+	}
+
+	
+.center{
+	text-align: center;
+	}
+
+#wrapper{
+	margin: 0 auto;
+	text-align: left;
+	font-size: 1.4em;
+	}
+	
+header{
+	@include box-shadow;
+	background: $color-dark;
+	color: $color-alt-dark;
+	padding: $padding*2;
+
+	& h1{
+		@extend .left;
+		margin: 0;
+		font-size: 4em;
+		
+		}
+
+	& h2{
+		@extend .right;
+		}
+}
+
+header h1 a{
+	color: $color-alt-dark;
+	}
+
+#content{
+	padding: $padding*2 $padding;
+}
+	
+
+footer{
+	background: #000000;
+	color: $color-alt-light;
+	padding: $padding;
+	font-size: $font-size-reg+0.25;
+	}
+
+.copy{
+	@extend .right;
+	@extend .small;
+	}
+
+a.button {
+	@include box-shadow;
+	@include border-radius;
+	@include gradient;
+	display: block;
+	color: #FFFFFF;
+	padding: $padding $padding*2;
+	width: 80%;
+	margin: 15px auto;
+	font-size: 2em;
+	text-align: center;
+
+	&:hover {
+		@include gradient(#a62424, #f07f7f);
+		}
+}
+	
+/**SOME DEFAULT BLOG STYLES**/
+.navigation{
+padding: $padding;
+font-size: $font-size-reg;
+}
+
+.post{
+margin: $padding;
+}
+
+.postmetadata{
+border: {
+	style: solid;
+	color: $color-accent;
+	width: 1px 0;
+	}
+padding: $padding;
+font-size: ($font-size-reg)-0.35;
+}
+
+ol.commentlist{
+margin: $padding;
+}
+
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+.alignright {
+	float: right;
+	}
+
+.alignleft {
+	float: left;
+	}
+/* End Images */
+
+/* Captions */
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	border: 1px solid $color-alt-dark;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding: ($padding)-0.2;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	}
+
+.wp-caption p.wp-caption-text {
+	font-size: ($font-size-reg)-0.4;
+	line-height: 1.7em;
+	padding: ($padding)-0.3;
+	margin: 0;
+}
+/* End captions */
+
+
+
+/* self-clear floats */
+
+.group:after {
+	content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+	}
+
+.clear{
+clear: both;
+}
+
