@@ -132,6 +132,23 @@ a{
 		}
 
 	}
+
+a.button {
+	@include box-shadow;
+	@include border-radius;
+	@include gradient;
+	display: block;
+	color: #FFFFFF;
+	padding: $padding $padding*2;
+	width: 80%;
+	margin: 15px auto;
+	font-size: 2em;
+	text-align: center;
+
+	&:hover {
+		@include gradient(#a62424, #f07f7f);
+		}
+}
 	
 
 b, strong{
@@ -215,109 +232,32 @@ header h1 a{
 	color: $color-alt-dark;
 	}
 
-#content{
+.project{
+	margin: $padding*2 auto;
 	padding: $padding*2 $padding;
-}
-	
-
-footer{
-	background: #000000;
-	color: $color-alt-light;
-	padding: $padding;
-	font-size: $font-size-reg+0.25;
-	}
-
-.copy{
-	@extend .right;
-	@extend .small;
-	}
-
-a.button {
-	@include box-shadow;
+	background: #FFFFFF;
+	color: $color-alt-dark;
 	@include border-radius;
-	@include gradient;
-	display: block;
-	color: #FFFFFF;
-	padding: $padding $padding*2;
-	width: 80%;
-	margin: 15px auto;
-	font-size: 2em;
-	text-align: center;
+	border: 1px solid $color-dark;
 
-	&:hover {
-		@include gradient(#a62424, #f07f7f);
+	& h2{
+		font-size: $font-size-reg*2;
+		padding: $padding 0;
+		}
+
+	& p{
+		font-size: $font-size-reg+0.5;
+		line-height: $font-size-reg+0.2;
+		}
+
+	& a.button{
+		max-width: 40%;
+		}
+
+	@media screen and (min-width: $bp-medium){
+		max-width: 75%;
 		}
 }
-	
-/**SOME DEFAULT BLOG STYLES**/
-.navigation{
-padding: $padding;
-font-size: $font-size-reg;
-}
-
-.post{
-margin: $padding;
-}
-
-.postmetadata{
-border: {
-	style: solid;
-	color: $color-accent;
-	width: 1px 0;
-	}
-padding: $padding;
-font-size: ($font-size-reg)-0.35;
-}
-
-ol.commentlist{
-margin: $padding;
-}
-
-img.centered {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	}
-
-.alignright {
-	float: right;
-	}
-
-.alignleft {
-	float: left;
-	}
-/* End Images */
-
-/* Captions */
-.aligncenter,
-div.aligncenter {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.wp-caption {
-	border: 1px solid $color-alt-dark;
-	text-align: center;
-	background-color: #f3f3f3;
-	padding: ($padding)-0.2;
-}
-
-.wp-caption img {
-	margin: 0;
-	padding: 0;
-	border: 0 none;
-	}
-
-.wp-caption p.wp-caption-text {
-	font-size: ($font-size-reg)-0.4;
-	line-height: 1.7em;
-	padding: ($padding)-0.3;
-	margin: 0;
-}
-/* End captions */
-
-
 
 /* self-clear floats */
 
