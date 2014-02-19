@@ -18,10 +18,13 @@ $color-accent: #425463;
 $color-alt-dark: #696A6B;
 $color-alt-light: lighten($color-alt-dark, 40%);;
 
+$max-width: 1700px;
+
 $bp-small: 32.19em;
 $bp-medium: 45.88em;
 $bp-large: 54.62em;
-$bp-xl: 72em;
+$bp-xl: 76.38em;
+$bp-max: 99.4em;
 $padding: 0.5em;
 $margin: 0;
 
@@ -52,7 +55,8 @@ $margin: 0;
 	}
 
 .contain{
-
+	max-width: $max-width;
+	margin: 0 auto;
 	}
 
 .half{
@@ -86,7 +90,7 @@ $margin: 0;
 	color: $color-dark;
 
 	@media screen and (min-width: $bp-medium){
-		float: left;
+		display: inline-block;
 		width: 40%;
 		}
 
@@ -96,6 +100,10 @@ $margin: 0;
 
 	@media screen and (min-width: $bp-xl){
 		width: 29%;
+		}
+
+	@media screen and (min-width: $bp-max){
+		width: 30%;
 		}
 
 	}
@@ -230,6 +238,10 @@ header{
 
 header h1 a{
 	color: $color-alt-dark;
+	}
+
+.portfolio{
+	margin: 0 auto;
 	}
 
 .project{
