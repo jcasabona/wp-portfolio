@@ -31,6 +31,8 @@ add_action( 'wp_enqueue_scripts', 'jlc_projects_scripts' );
 /**Actions, Filters, and Hooks**/
 
 
+add_filter( 'post_thumbnail_html', 'jlc_projects_get_featured_image');
+
 //Replace image with picturefill markup
 function jlc_projects_get_featured_image($html, $aid=false){
     $sizes= array('thumbnail', 'medium', 'large', 'jlc_project', 'full'); 
@@ -55,8 +57,6 @@ function jlc_projects_get_featured_image($html, $aid=false){
 		</span>';
 	return $img;
 }
-
-add_filter( 'post_thumbnail_html', 'jlc_projects_get_featured_image');
 
 
 
